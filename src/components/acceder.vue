@@ -62,17 +62,7 @@
           <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
         </button>
 
-        <div class="userlogin-social-login">
-          <button type="button" class="userlogin-social-btn">
-            <i class="fab fa-google"></i>
-          </button>
-          <button type="button" class="userlogin-social-btn">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-          <button type="button" class="userlogin-social-btn">
-            <i class="fab fa-apple"></i>
-          </button>
-        </div>
+        
       </form>
 
       <div class="userlogin-footer">
