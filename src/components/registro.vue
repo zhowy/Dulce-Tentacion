@@ -1,88 +1,112 @@
 <template>
-  <div class="userregister-wrapper">
-    <div class="userregister-container">
-      <div class="userregister-header">
-        <h1>Dulce Tentación</h1>
-        <p>¡Únete a nuestra comunidad de amantes de los postres!</p>
-      </div>
+  <div>
+    <!-- Navegación -->
+    <nav class="sticky-nav">
+      <div class="nav-container">
+        <!-- Logo o botón volver -->
+      <RouterLink to="/acceder" class="logo-small volver-link">
+  <i class="fas fa-arrow-left"></i>
+  <span>Volver</span>
+</RouterLink>
 
-      <form class="userregister-form">
-        <div class="userregister-row">
-          <div class="userregister-group">
-            <label for="first-name">Nombre</label>
-            <input type="text" id="first-name" placeholder="Tu nombre" required>
+
+        <!-- Enlaces centrados -->
+        <ul class="nav-links center-links">
+          
+        </ul>
+
+        <!-- Botón login -->
+        <div class="login-button">
+         
+        </div>
+      </div>
+    </nav>
+
+    <!-- Registro -->
+    <div class="userregister-wrapper">
+      <div class="userregister-container">
+        <div class="userregister-header">
+          <h1>Dulce Tentación</h1>
+          <p>¡Únete a nuestra comunidad de amantes de los postres!</p>
+        </div>
+
+        <form class="userregister-form">
+          <div class="userregister-row">
+            <div class="userregister-group">
+              <label for="first-name">Nombre</label>
+              <input type="text" id="first-name" placeholder="Tu nombre" required />
+            </div>
+            <div class="userregister-group">
+              <label for="last-name">Apellido</label>
+              <input type="text" id="last-name" placeholder="Tu apellido" required />
+            </div>
           </div>
 
           <div class="userregister-group">
-            <label for="last-name">Apellido</label>
-            <input type="text" id="last-name" placeholder="Tu apellido" required>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required />
           </div>
-        </div>
 
-        <div class="userregister-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required>
-        </div>
-
-        <div class="userregister-group">
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" placeholder="••••••••" required>
-          <div class="userregister-strength">
-            <div class="userregister-meter" id="strength-meter"></div>
+          <div class="userregister-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" placeholder="••••••••" required />
+            <div class="userregister-strength">
+              <div class="userregister-meter" id="strength-meter"></div>
+            </div>
           </div>
-        </div>
 
-        <div class="userregister-group">
-          <label for="confirm-password">Confirmar contraseña</label>
-          <input type="password" id="confirm-password" placeholder="••••••••" required>
-        </div>
+          <div class="userregister-group">
+            <label for="confirm-password">Confirmar contraseña</label>
+            <input type="password" id="confirm-password" placeholder="••••••••" required />
+          </div>
 
-        <button type="submit" class="userregister-btn">
-          <i class="fas fa-user-plus"></i> Crear Cuenta
-        </button>
+          <button type="submit" class="userregister-btn">
+            <i class="fas fa-user-plus"></i> Crear Cuenta
+          </button>
 
-        <div class="userregister-terms">
-          Al registrarte, aceptas nuestros <a id="terms-link">Términos de servicio</a> y <a id="privacy-link">Política de privacidad</a>
-        </div>
-      </form>
+          <div class="userregister-terms">
+            Al registrarte, aceptas nuestros <a id="terms-link">Términos de servicio</a> y <a id="privacy-link">Política de privacidad</a>
+          </div>
+        </form>
 
-      <div class="userregister-footer">
-        ¿Ya tienes una cuenta? <a href="/acceder">Inicia sesión aquí</a>
-      </div>
-    </div>
-
-    <!-- Modal Términos -->
-    <div class="userregister-modal" id="terms-modal">
-      <div class="userregister-modal-content">
-        <div class="userregister-modal-header">
-          <h2>Términos de Servicio</h2>
-          <button class="userregister-close-modal">&times;</button>
-        </div>
-        <div class="userregister-modal-body">
-          <h3>1. Pendiente</h3>
-          <p>Los términos de servicio están en redacción y serán publicados próximamente.</p>
-          <h3>2. Pendiente</h3>
-          <p>Trabajamos en una experiencia segura para todos.</p>
-          <h3>3. Pendiente</h3>
-          <p>Detallaremos las condiciones de uso pronto.</p>
+        <div class="userregister-footer">
+          ¿Ya tienes una cuenta? <a href="/acceder">Inicia sesión aquí</a>
         </div>
       </div>
-    </div>
 
-    <!-- Modal Privacidad -->
-    <div class="userregister-modal" id="privacy-modal">
-      <div class="userregister-modal-content">
-        <div class="userregister-modal-header">
-          <h2>Política de Privacidad</h2>
-          <button class="userregister-close-modal">&times;</button>
+      <!-- Modal Términos -->
+      <div class="userregister-modal" id="terms-modal">
+        <div class="userregister-modal-content">
+          <div class="userregister-modal-header">
+            <h2>Términos de Servicio</h2>
+            <button class="userregister-close-modal">&times;</button>
+          </div>
+          <div class="userregister-modal-body">
+            <h3>1. Pendiente</h3>
+            <p>Los términos de servicio están en redacción y serán publicados próximamente.</p>
+            <h3>2. Pendiente</h3>
+            <p>Trabajamos en una experiencia segura para todos.</p>
+            <h3>3. Pendiente</h3>
+            <p>Detallaremos las condiciones de uso pronto.</p>
+          </div>
         </div>
-        <div class="userregister-modal-body">
-          <h3>1. Pendiente</h3>
-          <p>Estamos desarrollando nuestra política para proteger tus datos.</p>
-          <h3>2. Pendiente</h3>
-          <p>Cumpliremos con todas las normativas vigentes.</p>
-          <h3>3. Pendiente</h3>
-          <p>Publicaremos los detalles próximamente.</p>
+      </div>
+
+      <!-- Modal Privacidad -->
+      <div class="userregister-modal" id="privacy-modal">
+        <div class="userregister-modal-content">
+          <div class="userregister-modal-header">
+            <h2>Política de Privacidad</h2>
+            <button class="userregister-close-modal">&times;</button>
+          </div>
+          <div class="userregister-modal-body">
+            <h3>1. Pendiente</h3>
+            <p>Estamos desarrollando nuestra política para proteger tus datos.</p>
+            <h3>2. Pendiente</h3>
+            <p>Cumpliremos con todas las normativas vigentes.</p>
+            <h3>3. Pendiente</h3>
+            <p>Publicaremos los detalles próximamente.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -136,7 +160,10 @@ export default {
 }
 </script>
 
+<!-- 🔧 Estilos -->
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Pacifico&display=swap');
+
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
@@ -158,7 +185,7 @@ body {
   max-width: 600px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   width: 100%;
 }
@@ -207,7 +234,6 @@ body {
   border: 1px solid #ffccd5;
   border-radius: 8px;
   background: #fff9f9;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .userregister-strength {
@@ -274,7 +300,7 @@ body {
   position: fixed;
   z-index: 1000;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   align-items: center;
   justify-content: center;
 }
@@ -302,7 +328,81 @@ body {
   cursor: pointer;
 }
 
+/* Navegación */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 12px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-small {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  color: #5A3E36;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links.center-links {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  justify-content: center;
+  flex: 2;
+}
+
+.login-button {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5A3E36;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background-color: #FFD1DC;
+}
+
 @media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-small,
+  .login-button {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-links.center-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .userregister-row {
     flex-direction: column;
   }
